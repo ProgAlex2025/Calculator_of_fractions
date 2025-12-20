@@ -63,9 +63,17 @@ namespace Calculator_of_simple_fraction
                     int l = Convert.ToInt32(k);
                     currSymvol.denum += l;
                 }
-                else if (char.IsNumber(sym) == false && sym != '/')
+                else if (char.IsNumber(sym) == false && sym != '/' && i != 0)
                 {
                     symvols.Add(currSymvol);
+                    currSymvol = new Symvol();
+                    currSymvol.move = Convert.ToString(sym);
+                    symvols.Add(currSymvol);
+                    currSymvol = new Symvol();
+                    Numerator = true;
+                }
+                else if (char.IsNumber(sym) == false && sym != '/' && i == 0)
+                {
                     currSymvol = new Symvol();
                     currSymvol.move = Convert.ToString(sym);
                     symvols.Add(currSymvol);
@@ -80,19 +88,94 @@ namespace Calculator_of_simple_fraction
             }
 
             symvols.Add(currSymvol);
+
+            for (int i = 0; i < symvols.Count; i++)
+            {
+
+                if (symvols[i].move == "" && symvols[i].num == 0 && symvols[i].denum == 0)
+                {
+
+                    symvols.RemoveAt(i);
+                    i--;
+
+                }
+
+            }
+
             return symvols;
         }
 
-        private static readonly Dictionary<string, int> Protocol = new()
-    {
-        { "(", 0 },
-        { ")", 0 },
-        { "|", 1 },
-        { "*", 2 },
-        { "/", 2 },
-        { "+", 3 },
-        { "-", 3 }
-    };
+
+        public static bool Mistakes(List<Symvol> symvols)
+        {
+
+            int flag = 0;
+            int k = 0;
+            while (k < symvols.Count - 1)
+            {
+                k++;
+
+                if (symvols[k].move == "(")
+                {
+                    flag++;
+                }
+                else if (symvols[k].move == ")")
+                {
+                    flag--;
+                }
+
+            }
+
+            if (flag != 0)
+            {
+
+                return false;
+
+            }
+
+            for (int i = 0; i < symvols.Count; i++)
+            {
+              
+                if (symvols[i].denum == 0 && symvols[i].move == "")
+                {
+
+                    return false;
+
+                }
+
+                else if (symvols[i].move != "*" && symvols[i].move != ":" && symvols[i].move != "-" && symvols[i].move != "+" && symvols[i].num == 0 && symvols[i].num == 0)
+                {
+
+                    return false;
+
+                }
+
+            }
+
+            return true;
+
+        }
+
+        
+        public static List<Symvol> Minus(List<Symvol> symvols)
+        {
+
+            for (int i = 0; i < symvols.Count - 1; i++)
+            {
+
+                if (symvols[i].move == "-" && ((symvols[i+1].num == 0 && symvols[i + 1].denum == 0) || i == 0 || symvols[i-1].move != ""))
+                {
+
+                    symvols[i + 1].num *= -1;
+                    symvols.RemoveAt(i);
+
+                }
+                
+            }
+
+            return symvols;
+
+        }
 
         public static int GCD(int val1, int val2)
         {
@@ -107,7 +190,7 @@ namespace Calculator_of_simple_fraction
             int num = a.num * b.denum + b.num * a.denum;
             int denum = a.denum * b.denum;
             int gcd = GCD(num, denum);
-            return new Symvol { num = num / gcd, denum = denum / gcd };
+            return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
         }
 
         private static Symvol Subtraction(Symvol a, Symvol b)
@@ -115,7 +198,7 @@ namespace Calculator_of_simple_fraction
             int num = a.num * b.denum - b.num * a.denum;
             int denum = a.denum * b.denum;
             int gcd = GCD(num, denum);
-            return new Symvol { num = num / gcd, denum = denum / gcd };
+            return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
         }
 
         private static Symvol Multip(Symvol a, Symvol b)
@@ -123,7 +206,7 @@ namespace Calculator_of_simple_fraction
             int num = a.num * b.num;
             int denum = a.denum * b.denum;
             int gcd = GCD(num, denum);
-            return new Symvol { num = num / gcd, denum = denum / gcd };
+            return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
         }
 
         private static Symvol Divide(Symvol a, Symvol b)
@@ -131,90 +214,142 @@ namespace Calculator_of_simple_fraction
             int num = a.num * b.denum;
             int denum = a.denum * b.num;
             int gcd = GCD(num, denum);
-            return new Symvol { num = num / gcd, denum = denum / gcd };
+            return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
         }
 
-        public static List<Symvol> ToRPN(List<Symvol> symvol)
+        private static int FindBracket(List<Symvol> symvols, int start=0)
         {
-            var symvols = new List<Symvol>();
-            var stack = new Stack<Symvol>();
-
-            foreach (var symv in symvol)
+            int flag = 1;
+            int i = start + 1;
+            while ((flag != 0) && (i < symvols.Count))
             {
-                if (symv.move == "")
+                i++;
+
+                if (symvols[i].move == "(")
                 {
-                    symvols.Add(symv);
+                    flag++;
                 }
-                else if (symv.move == "(")
+                else if (symvols[i].move == ")")
                 {
-                    stack.Push(symv);
+                    flag--;
                 }
-                else if (symv.move == ")")
-                {
-                    while (stack.Count > 0 && stack.Peek().move != "(")
-                    {
-                        symvols.Add(stack.Pop());
-                    }
-                    stack.Pop();
-                }
-                else
-                {
-                    while (stack.Count > 0 &&
-                           stack.Peek().move != "(" &&
-                           Protocol[stack.Peek().move] <= Protocol[symv.move])
-                   
-                    {
-                        symvols.Add(stack.Pop());
-                    }
-                    stack.Push(symv);
-                }
+
             }
 
-            while (stack.Count > 0)
+           
+            return i;
+
+
+        }
+
+        public static List<Symvol> SolutBrackets(List<Symvol> symvols)
+        {
+
+            for (int i = 0; i < symvols.Count; i++)
             {
-                symvols.Add(stack.Pop());
+
+                if (symvols[i].move == "(")
+                {
+
+                    int fin = FindBracket(symvols, i);
+                    int start = i;
+                    List<Symvol> part = symvols.GetRange(start + 1, fin - start - 1);
+                    part = Solut(part);
+                    symvols.RemoveRange(start, fin - start + 1);
+                    symvols.InsertRange(start, part);
+                    i += part.Count - 1;
+
+                }
+
             }
 
             return symvols;
+
         }
 
-        public static Symvol CalculateRPN(List<Symvol> symvol)
+        public static List<Symvol> SolutFirstPriority(List<Symvol> symvols)
         {
-            var stack = new Stack<Symvol>();
 
-            foreach (var symv in symvol)
+            for (int i = 0; i < symvols.Count; i++)
             {
-                if (symv.move == "")
-                {
-                    stack.Push(symv);
-                }
-                else
-                {
-                    Symvol b = stack.Pop();
-                    Symvol a = stack.Pop();
-                    var CurrSymv = new Symvol();
 
-                    switch (symv.move)
-                    {
-                        case "+":
-                            CurrSymv = Addition(a, b);
-                            break;
-                        case "-":
-                            CurrSymv = Subtraction(a, b);
-                            break;
-                        case "*":
-                            CurrSymv = Multip(a, b);
-                            break;
-                        case "/":
-                            CurrSymv = Divide(a, b);
-                            break;
-                    }
+                if (symvols[i].move == "*")
+                {
 
-                    stack.Push(CurrSymv);
+                    symvols[i] = Multip(symvols[i - 1], symvols[i + 1]);
+                    symvols.RemoveAt(i - 1);
+                    i--;
+                    symvols.RemoveAt(i + 1);
+                    i--;
+
                 }
+                else if (symvols[i].move == ":")
+                {
+
+                    symvols[i] = Divide(symvols[i - 1], symvols[i + 1]);
+                    symvols.RemoveAt(i - 1);
+                    i--;
+                    symvols.RemoveAt(i + 1);
+                    i--;
+
+                }
+
+
             }
 
-            return stack.Pop();
+            List<Symvol> result = symvols;
+
+            return result;
+
+        }
+
+        public static List<Symvol> SolutSecondPriority(List<Symvol> symvols)
+        {
+
+            for (int i = 0; i < symvols.Count; i++)
+            {
+
+                if (symvols[i].move == "+")
+                {
+
+                    symvols[i] = Addition(symvols[i - 1], symvols[i + 1]);
+                    symvols.RemoveAt(i - 1);
+                    i--;
+                    symvols.RemoveAt(i + 1);
+                    i--;
+
+                }
+                else if (symvols[i].move == "-")
+                {
+
+                    symvols[i] = Subtraction(symvols[i - 1], symvols[i + 1]);
+                    symvols.RemoveAt(i - 1);
+                    i--;
+                    symvols.RemoveAt(i + 1);
+                    i--;
+
+                }
+
+
+            }
+
+            List<Symvol> result = symvols;
+
+            return result;
+
+        }
+
+
+        public static List<Symvol> Solut(List<Symvol> symvols)
+        {
+
+            List<Symvol> result = SolutBrackets(symvols);
+            result = Minus(result);
+            result = SolutFirstPriority(result);
+            result = SolutSecondPriority(result);
+
+            return result;
+
         }
 
         private void Solution_Click(object sender, EventArgs e)
@@ -222,67 +357,29 @@ namespace Calculator_of_simple_fraction
 
             string s = Input.Text;
             List<Symvol> symvols = Sint(s);
-            symvols = ToRPN(symvols);
-            Symvol result = CalculateRPN(symvols);
-            Output.Text = $"{result.num}/{result.denum}";
+            bool mistake = Mistakes(symvols);
+            if (mistake == false)
+            {
 
-            //int i = 0;
-            //char char1 = '*';
-            //char char2 = ':';
-            //int index1 = s.IndexOf(char1);
-            //int index2 = s.IndexOf(char2);
+                Output.Text = Output.Text + " = " + "Ошибка может быть в синтаксисе, либо же в корректности выражения";
 
-            //if ((index1 < 0) && (index2 < 0))
-            //{
-            //    int counter = 1;
-            //    for (int _ = 0; _ < symvols.Count; i++)
-            //    {
-            //        if (symvols[_].move != "")
-            //        {
-            //            symvols[_].prot = counter;
-            //            counter++;
-            //        }
-            //    }
-            //}
+            }
 
-            //while (symvols.Count != 1)
-            //{
+            else
+            {
+                List<Symvol> result = Solut(symvols);
 
-            //    if (symvols[i].move != "")
+                if (result[0].denum < 0)
+                {
 
-            //    {
+                    result[0].denum *= -1;
+                    result[0].num *= -1;
 
-            //        if (symvols[i].move == "*")
-            //        {
+                }
 
-            //            symvols = Multip(i, symvols);
-            //            i -= 1;
+                Output.Text = Output.Text + " = " + Convert.ToString(result[0].num) + '/' + Convert.ToString(result[0].denum);
 
-            //        }
-
-            //        if (symvols[i].move == "*")
-            //        {
-
-            //            symvols = Addition(i, symvols);
-            //            i -= 1;
-
-            //        }
-
-            //        if (symvols[i].move == "*")
-            //        {
-
-            //            symvols = Subtraction(i, symvols);
-            //            i -= 1;
-
-            //        }
-
-            //    }
-
-            //    i += 1;
-
-            //}
-
-            Output.Text = Convert.ToString(symvols[0].num) + '/' + Convert.ToString(symvols[0].denum);
+            }
         }
     }
 }
