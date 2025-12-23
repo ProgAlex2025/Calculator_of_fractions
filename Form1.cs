@@ -143,7 +143,19 @@ namespace Calculator_of_simple_fraction
 
                 }
 
-                else if (symvols[i].move != "*" && symvols[i].move != ":" && symvols[i].move != "-" && symvols[i].move != "+" && symvols[i].num == 0 && symvols[i].num == 0)
+                else if (symvols[i].move != "*" && symvols[i].move != ":" && symvols[i].move != "-" && symvols[i].move != "+" && symvols[i].num == 0 && symvols[i].denum == 0)
+                {
+
+                    return false;
+
+                }
+
+            }
+
+            for (int i = 0; i < symvols.Count - 1; i++)
+            {
+
+                if (symvols[i].move == symvols[i+1].move)
                 {
 
                     return false;
@@ -376,9 +388,18 @@ namespace Calculator_of_simple_fraction
                     result[0].num *= -1;
 
                 }
+                else if (result[0].denum == 0)
+                {
 
-                Output.Text = Output.Text + " = " + Convert.ToString(result[0].num) + '/' + Convert.ToString(result[0].denum);
+                    Output.Text = Output.Text + " = " + "Ошибка может быть в синтаксисе, либо же в корректности выражения";
 
+                }
+                else
+                {
+
+                    Output.Text = Output.Text + " = " + Convert.ToString(result[0].num) + '/' + Convert.ToString(result[0].denum);
+
+                }
             }
         }
     }

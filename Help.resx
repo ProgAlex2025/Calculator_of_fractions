@@ -117,15 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Обозначение самой дроби - n/m
-Сложение - "+"
-Вычитание - "-"
-Умножение - "*"
-Деление - ":"
-Обозначить целую часть - |
-Возведение в степень - (...)^
-Взять корень - (...)^1/n, где n - степень корня
-</value>
-  </data>
 </root>

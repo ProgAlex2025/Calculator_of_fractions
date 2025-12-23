@@ -21,5 +21,10 @@ namespace Calculator_of_simple_fraction
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

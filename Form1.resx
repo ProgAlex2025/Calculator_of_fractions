@@ -122,7 +122,7 @@
     <value>Palatino Linotype, 25pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>346, 53</value>
+    <value>656, 39</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>734, 90</value>
@@ -153,7 +153,7 @@
     <value>44, 158</value>
   </data>
   <data name="Input.Size" type="System.Drawing.Size, System.Drawing">
-    <value>830, 47</value>
+    <value>1795, 47</value>
   </data>
   <data name="Input.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -177,7 +177,10 @@
     <value>Segoe UI, 25pt</value>
   </data>
   <data name="Output.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 320</value>
+    <value>44, 442</value>
+  </data>
+  <data name="Output.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1500, 900</value>
   </data>
   <data name="Output.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 67</value>
@@ -201,7 +204,7 @@
     <value>Segoe UI, 15pt</value>
   </data>
   <data name="Solution.Location" type="System.Drawing.Point, System.Drawing">
-    <value>971, 136</value>
+    <value>867, 255</value>
   </data>
   <data name="Solution.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 100</value>
@@ -228,7 +231,7 @@
     <value>Segoe UI, 35pt</value>
   </data>
   <data name="Help.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1241, 628</value>
+    <value>1739, 847</value>
   </data>
   <data name="Help.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 135</value>
@@ -258,7 +261,7 @@
     <value>10, 25</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1374, 777</value>
+    <value>1894, 1020</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Menu</value>

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Help));
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
@@ -47,11 +46,12 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(33, 238);
+            label2.Location = new Point(81, 257);
             label2.Name = "label2";
-            label2.Size = new Size(421, 224);
+            label2.Size = new Size(317, 168);
             label2.TabIndex = 1;
-            label2.Text = resources.GetString("label2.Text");
+            label2.Text = "Обозначение самой дроби - n/m\r\nСложение - \"+\"\r\nВычитание - \"-\"\r\nУмножение - \"*\"\r\nДеление - \":\"\r\n\r\n";
+            label2.Click += label2_Click;
             // 
             // Help
             // 
