@@ -80,9 +80,19 @@ namespace Calculator_of_simple_fraction
                     currSymvol = new Symvol();
                     Numerator = true;
                 }
-                else if (sym == '/')
+                else if (sym == '/' && Numerator == true)
                 {
                     Numerator = false;
+                }
+                else if (sym == '/' && Numerator == false)
+                {
+                    symvols.Add(currSymvol);
+                    currSymvol = new Symvol();
+                    currSymvol.move = "Fail";
+                    symvols.Add(currSymvol);
+                    currSymvol = new Symvol();
+                    Numerator = true;
+
                 }
 
             }
@@ -135,7 +145,7 @@ namespace Calculator_of_simple_fraction
 
             for (int i = 0; i < symvols.Count; i++)
             {
-              
+
                 if (symvols[i].denum == 0 && symvols[i].move == "")
                 {
 
@@ -143,7 +153,7 @@ namespace Calculator_of_simple_fraction
 
                 }
 
-                else if (symvols[i].move != "*" && symvols[i].move != ":" && symvols[i].move != "-" && symvols[i].move != "+" && symvols[i].num == 0 && symvols[i].denum == 0)
+                else if (symvols[i].move != "*" && symvols[i].move != ":" && symvols[i].move != "-" && symvols[i].move != "+" && symvols[i].move != "(" && symvols[i].move != ")" && symvols[i].num == 0 && symvols[i].denum == 0)
                 {
 
                     return false;
@@ -155,7 +165,7 @@ namespace Calculator_of_simple_fraction
             for (int i = 0; i < symvols.Count - 1; i++)
             {
 
-                if (symvols[i].move == symvols[i+1].move)
+                if (symvols[i].move == symvols[i + 1].move && (symvols[i + 1].move != "(" && symvols[i].move != "("))
                 {
 
                     return false;
@@ -235,7 +245,6 @@ namespace Calculator_of_simple_fraction
             int i = start + 1;
             while ((flag != 0) && (i < symvols.Count))
             {
-                i++;
 
                 if (symvols[i].move == "(")
                 {
@@ -246,10 +255,12 @@ namespace Calculator_of_simple_fraction
                     flag--;
                 }
 
+                i++;
+
             }
 
            
-            return i;
+            return i - 1;
 
 
         }
@@ -388,7 +399,8 @@ namespace Calculator_of_simple_fraction
                     result[0].num *= -1;
 
                 }
-                else if (result[0].denum == 0)
+                
+                if (result[0].denum == 0)
                 {
 
                     Output.Text = Output.Text + " = " + "Ошибка может быть в синтаксисе, либо же в корректности выражения";
