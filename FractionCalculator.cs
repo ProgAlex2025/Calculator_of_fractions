@@ -229,22 +229,13 @@ namespace Calculator_of_simple_fraction
             return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
         }
 
-        private static Symvol Divide(Symvol a, Symvol b)
+        public static Symvol Divide(Symvol a, Symvol b)
         {
             int num = a.num * b.denum;
             int denum = a.denum * b.num;
             int gcd = GCD(num, denum);
             return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
         }
-
-        //public static Symvol Int_part(Symvol a, Symvol b)
-        //{
-
-        //    int num = a.whole * b.denum + b.num;
-        //    int denum = b.denum;
-        //    int gcd = GCD(num, denum);
-        //    return new Symvol { num = num / gcd, denum = denum / gcd, move = "" };
-        //}
 
         private static int FindBracket(List<Symvol> symvols, int start = 0) // поиск закрывающей скобки
         {
@@ -296,29 +287,6 @@ namespace Calculator_of_simple_fraction
             return symvols;
 
         }
-
-        //public static List<Symvol> Solut_int_part(List<Symvol> symvols)
-        //{
-
-        //    for (int i = 0; i < symvols.Count - 1; i++)
-        //    {
-
-        //        if (symvols[i].move == "|")
-        //        {
-
-        //            symvols[i + 1] = Int_part(symvols[i - 1], symvols[i + 1]);
-        //            symvols.RemoveAt(i - 1);
-        //            i--;
-        //            symvols.RemoveAt(i);
-        //            i--;
-
-        //        }
-
-        //    }
-
-        //    return symvols;
-
-        //}
 
         public static List<Symvol> SolutFirstPriority(List<Symvol> symvols) // решение слева направо все действия умножения и деления
         {

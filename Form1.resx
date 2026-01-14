@@ -118,21 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Denumerator.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
+  </data>
+  <data name="Denumerator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 232</value>
+  </data>
+  <data name="Denumerator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1651, 47</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Denumerator.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Denumerator.Name" xml:space="preserve">
+    <value>Denumerator</value>
+  </data>
+  <data name="&gt;&gt;Denumerator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Denumerator.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Denumerator.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 25pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>656, 39</value>
+    <value>471, 39</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>734, 90</value>
+    <value>1032, 90</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Калькулятор простых дробей</value>
+    <value>Калькулятор простых и сложных дробей</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -144,16 +168,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="Input.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15pt</value>
   </data>
   <data name="Input.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 158</value>
+    <value>188, 158</value>
   </data>
   <data name="Input.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1795, 47</value>
+    <value>1651, 47</value>
   </data>
   <data name="Input.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -168,43 +192,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Input.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
-  <data name="Output.AutoSize" type="System.Boolean, mscorlib">
+  <data name="Numerator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Output.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="Numerator.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 25pt</value>
   </data>
-  <data name="Output.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 442</value>
+  <data name="Numerator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 516</value>
   </data>
-  <data name="Output.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="Numerator.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>1500, 900</value>
   </data>
-  <data name="Output.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Numerator.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 67</value>
   </data>
-  <data name="Output.TabIndex" type="System.Int32, mscorlib">
+  <data name="Numerator.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;Output.Name" xml:space="preserve">
-    <value>Output</value>
+  <data name="&gt;&gt;Numerator.Name" xml:space="preserve">
+    <value>Numerator</value>
   </data>
-  <data name="&gt;&gt;Output.Type" xml:space="preserve">
+  <data name="&gt;&gt;Numerator.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Output.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Numerator.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Output.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;Numerator.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="Solution.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15pt</value>
   </data>
   <data name="Solution.Location" type="System.Drawing.Point, System.Drawing">
-    <value>867, 255</value>
+    <value>870, 330</value>
   </data>
   <data name="Solution.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 100</value>
@@ -225,7 +249,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Solution.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="Help.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 35pt</value>
@@ -252,6 +276,154 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Help.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 64</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 29</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>Сложная</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 29</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 29</value>
+  </data>
+  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>Простая</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1510, 322</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 108</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Выбор дроби</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OutDenumerator.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OutDenumerator.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 25pt</value>
+  </data>
+  <data name="OutDenumerator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="OutDenumerator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 642</value>
+  </data>
+  <data name="OutDenumerator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1500, 900</value>
+  </data>
+  <data name="OutDenumerator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 67</value>
+  </data>
+  <data name="OutDenumerator.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;OutDenumerator.Name" xml:space="preserve">
+    <value>OutDenumerator</value>
+  </data>
+  <data name="&gt;&gt;OutDenumerator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OutDenumerator.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OutDenumerator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Output.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Output.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 25pt</value>
+  </data>
+  <data name="Output.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Output.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 602</value>
+  </data>
+  <data name="Output.Size" type="System.Drawing.Size, System.Drawing">
+    <value>649, 67</value>
+  </data>
+  <data name="Output.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Output.Text" xml:space="preserve">
+    <value>-------------------------------</value>
+  </data>
+  <data name="&gt;&gt;Output.Name" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="&gt;&gt;Output.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Output.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Output.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

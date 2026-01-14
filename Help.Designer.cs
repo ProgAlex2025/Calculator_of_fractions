@@ -46,11 +46,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(81, 257);
+            label2.Location = new Point(12, 209);
             label2.Name = "label2";
-            label2.Size = new Size(317, 168);
+            label2.Size = new Size(518, 224);
             label2.TabIndex = 1;
-            label2.Text = "Обозначение самой дроби - n/m\r\nСложение - \"+\"\r\nВычитание - \"-\"\r\nУмножение - \"*\"\r\nДеление - \":\"\r\n\r\n";
+            label2.Text = "Обозначение самой дроби - k|n/m, где k - целая часть, \r\nа n и m - числитель и знаменатель\r\nСложение - \"+\"\r\nВычитание - \"-\"\r\nУмножение - \"*\"\r\nДеление - \":\"\r\n\r\n\r\n";
             label2.Click += label2_Click;
             // 
             // Help
@@ -58,7 +58,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightPink;
-            ClientSize = new Size(500, 522);
+            ClientSize = new Size(569, 522);
             Controls.Add(label2);
             Controls.Add(label1);
             Location = new Point(100, 100);

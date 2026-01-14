@@ -29,12 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            Denumerator = new TextBox();
             label1 = new Label();
             Input = new TextBox();
-            Output = new Label();
+            Numerator = new Label();
             Solution = new Button();
             Help = new Button();
+            groupBox1 = new GroupBox();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            OutDenumerator = new Label();
+            Output = new Label();
+            groupBox1.SuspendLayout();
             SuspendLayout();
+            // 
+            // Denumerator
+            // 
+            resources.ApplyResources(Denumerator, "Denumerator");
+            Denumerator.Name = "Denumerator";
+            Denumerator.TextChanged += textBox1_TextChanged_1;
             // 
             // label1
             // 
@@ -47,10 +60,10 @@
             Input.Name = "Input";
             Input.TextChanged += textBox1_TextChanged;
             // 
-            // Output
+            // Numerator
             // 
-            resources.ApplyResources(Output, "Output");
-            Output.Name = "Output";
+            resources.ApplyResources(Numerator, "Numerator");
+            Numerator.Name = "Numerator";
             // 
             // Solution
             // 
@@ -68,19 +81,61 @@
             Help.UseVisualStyleBackColor = false;
             Help.Click += Help_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            resources.ApplyResources(groupBox1, "groupBox1");
+            groupBox1.Name = "groupBox1";
+            groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // radioButton2
+            // 
+            resources.ApplyResources(radioButton2, "radioButton2");
+            radioButton2.Name = "radioButton2";
+            radioButton2.TabStop = true;
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            // 
+            // radioButton1
+            // 
+            resources.ApplyResources(radioButton1, "radioButton1");
+            radioButton1.Name = "radioButton1";
+            radioButton1.TabStop = true;
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // OutDenumerator
+            // 
+            resources.ApplyResources(OutDenumerator, "OutDenumerator");
+            OutDenumerator.Name = "OutDenumerator";
+            // 
+            // Output
+            // 
+            resources.ApplyResources(Output, "Output");
+            Output.Name = "Output";
+            Output.Click += label2_Click;
+            // 
             // Menu
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
+            Controls.Add(Output);
+            Controls.Add(OutDenumerator);
+            Controls.Add(groupBox1);
+            Controls.Add(Denumerator);
             Controls.Add(Help);
             Controls.Add(Solution);
-            Controls.Add(Output);
+            Controls.Add(Numerator);
             Controls.Add(Input);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Name = "Menu";
             Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -89,8 +144,14 @@
 
         private Label label1;
         private TextBox Input;
-        private Label Output;
+        private Label Numerator;
         private Button Solution;
         private Button Help;
+        private TextBox Denumerator;
+        private GroupBox groupBox1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Label OutDenumerator;
+        private Label Output;
     }
 }
