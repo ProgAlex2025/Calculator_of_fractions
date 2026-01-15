@@ -64,6 +64,7 @@
             // 
             resources.ApplyResources(Numerator, "Numerator");
             Numerator.Name = "Numerator";
+            Numerator.Click += Numerator_Click;
             // 
             // Solution
             // 
@@ -94,13 +95,13 @@
             // 
             resources.ApplyResources(radioButton2, "radioButton2");
             radioButton2.Name = "radioButton2";
-            radioButton2.TabStop = true;
             radioButton2.UseVisualStyleBackColor = true;
             radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
             resources.ApplyResources(radioButton1, "radioButton1");
+            radioButton1.Checked = true;
             radioButton1.Name = "radioButton1";
             radioButton1.TabStop = true;
             radioButton1.UseVisualStyleBackColor = true;

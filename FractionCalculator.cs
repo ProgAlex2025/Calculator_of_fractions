@@ -25,6 +25,8 @@ namespace Calculator_of_simple_fraction
             }
         }
 
+        
+
 
         public static List<Symvol> Sint(String s) // переписываем строку в лист особого класса
         {
