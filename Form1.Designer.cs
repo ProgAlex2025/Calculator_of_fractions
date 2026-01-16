@@ -40,6 +40,8 @@
             radioButton1 = new RadioButton();
             OutDenumerator = new Label();
             Output = new Label();
+            label2 = new Label();
+            label3 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -118,11 +120,23 @@
             Output.Name = "Output";
             Output.Click += label2_Click;
             // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
+            // 
             // Menu
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(Output);
             Controls.Add(OutDenumerator);
             Controls.Add(groupBox1);
@@ -154,5 +168,7 @@
         private RadioButton radioButton1;
         private Label OutDenumerator;
         private Label Output;
+        private Label label2;
+        private Label label3;
     }
 }

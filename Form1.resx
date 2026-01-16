@@ -131,6 +131,9 @@
   <data name="Denumerator.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="Denumerator.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;Denumerator.Name" xml:space="preserve">
     <value>Denumerator</value>
   </data>
@@ -141,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Denumerator.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Palatino Linotype, 25pt</value>
@@ -168,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="Input.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15pt</value>
@@ -192,19 +195,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Input.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="Numerator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Numerator.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 25pt</value>
+    <value>Segoe UI, 22pt</value>
   </data>
   <data name="Numerator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 508</value>
+    <value>28, 528</value>
   </data>
   <data name="Numerator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 67</value>
+    <value>0, 60</value>
   </data>
   <data name="Numerator.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -219,7 +222,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Numerator.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="Solution.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15pt</value>
@@ -246,7 +249,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Solution.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="Help.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 35pt</value>
@@ -273,7 +276,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Help.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -355,22 +358,25 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="OutDenumerator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="OutDenumerator.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 25pt</value>
+    <value>Segoe UI, 22pt</value>
   </data>
   <data name="OutDenumerator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 674</value>
+    <value>28, 667</value>
   </data>
   <data name="OutDenumerator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 67</value>
+    <value>0, 60</value>
   </data>
   <data name="OutDenumerator.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="OutDenumerator.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;OutDenumerator.Name" xml:space="preserve">
     <value>OutDenumerator</value>
@@ -382,25 +388,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OutDenumerator.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="Output.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Output.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 25pt</value>
+    <value>Segoe UI, 22pt</value>
   </data>
   <data name="Output.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 597</value>
   </data>
+  <data name="Output.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1800, 0</value>
+  </data>
   <data name="Output.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1009, 67</value>
+    <value>673, 60</value>
   </data>
   <data name="Output.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="Output.Text" xml:space="preserve">
-    <value>-------------------------------------------------</value>
+    <value>------------------------------------</value>
+  </data>
+  <data name="Output.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;Output.Name" xml:space="preserve">
     <value>Output</value>
@@ -412,6 +424,63 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Output.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 158</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 25</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Пример:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 248</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 25</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Знаменатель</value>
+  </data>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
